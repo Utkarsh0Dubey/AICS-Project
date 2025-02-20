@@ -1,0 +1,65 @@
+------------------------------------------------
+# For 1.py
+Things Achieved: Integrating the 2 datasets, using the same label name for the column, Remove Duplicates, Finalize the Data shape.
+
+Number of duplicate URLs removed: 50
+Number of rows with unmapped labels: 0
+Final dataset shape: (504933, 2)
+Class distribution:
+ type
+0    345738
+1    159195
+Name: count, dtype: int64
+------------------------------------------------
+# For 2.py (EDA)
+Dataset Shape: (504933, 2)
+Column Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 504933 entries, 0 to 504932
+Data columns (total 2 columns):
+ #   Column  Non-Null Count   Dtype
+---  ------  --------------   -----
+ 0   url     504933 non-null  object
+ 1   type    504933 non-null  int64
+dtypes: int64(1), object(1)
+memory usage: 7.7+ MB
+None
+
+Preview of Data:
+                                                  url  type
+0  https://docs.google.com/presentation/d/e/2PACX...     1
+1    https://btttelecommunniccatiion.weeblysite.com/     1
+2                        https://kq0hgp.webwave.dev/     1
+3  https://brittishtele1bt-69836.getresponsesite....     1
+4         https://bt-internet-105056.weeblysite.com/     1
+
+Class Distribution (0=Legitimate, 1=Phishing):
+ type
+0    345738
+1    159195
+Name: count, dtype: int64
+Outliers saved to EDA Result\url_length_outliers.txt
+
+Descriptive Statistics of Numeric Features:
+           url_length  ...           type
+count  504933.000000  ...  504933.000000
+mean       60.924956  ...       0.315279
+std        66.309955  ...       0.464628
+min         8.000000  ...       0.000000
+25%        39.000000  ...       0.000000
+50%        52.000000  ...       0.000000
+75%        71.000000  ...       1.000000
+max     25523.000000  ...       1.000000
+
+[8 rows x 5 columns]
+
+Correlation Matrix:
+                           url_length  ...      type
+url_length                  1.000000  ...  0.054306
+special_char_count          0.546048  ... -0.050923
+subdomain_count             0.043245  ... -0.389371
+suspicious_keyword_count    0.136794  ...  0.279168
+type                        0.054306  ...  1.000000
+
+[5 rows x 5 columns]
+------------------------------------------------------------------------------------------------------------------------------------
