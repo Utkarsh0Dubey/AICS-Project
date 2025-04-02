@@ -1,0 +1,26 @@
+// Enhanced Phishing URL Detection Workflow
+digraph {
+	rankdir=TB size="8,10" splines=true
+	node [fontsize=10 shape=box style=filled]
+	A [label="Data Collection & Acquisition" color=lightblue]
+	B [label="Data Preprocessing
+(Cleaning, Normalization)" color=lightgreen]
+	C [label="Feature Extraction
+(Lexical, Host-based, Temporal)" color=orange]
+	D [label="Model Training
+(RandomForest, Ensemble)" color=yellow]
+	E [label="Interpretability Analysis
+(SHAP, LIME)" color=pink]
+	F [label="Adversarial Robustness Testing" color=violet]
+	G [label="Visualization & Evaluation
+(t-SNE, ROC, Confusion Matrices)" color=lightgrey]
+	H [label="Result Synthesis & Reporting" color=lightcoral]
+	A -> B [label="Step 1"]
+	B -> C [label="Step 2"]
+	C -> D [label="Step 3"]
+	D -> E [label="Step 4"]
+	D -> F [label="Adversarial Testing"]
+	E -> G [label=Visualization]
+	F -> G [label=Evaluation]
+	G -> H [label="Final Reporting"]
+}

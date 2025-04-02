@@ -1,0 +1,12 @@
+// Proposed Workflow
+digraph {
+	A [label="Data Preprocessing"]
+	B [label="Feature Extraction"]
+	C [label="Model Training"]
+	D [label="Interpretability Analysis"]
+	E [label=Evaluation]
+	A -> B [label="Step 1"]
+	B -> C [label="Step 2"]
+	C -> D [label="Step 3"]
+	D -> E [label="Step 4"]
+}
